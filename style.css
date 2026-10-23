@@ -313,7 +313,28 @@ button{
     .hero h1 {
         font-size: 40px !important;         /* Reduces giant 70px title for phone screen widths */
     }
-    
+
+    /* Fix horizontal page movement and overflow */
+html, body {
+    width: 100% !important;
+    overflow-x: hidden !important; 
+}
+
+@media screen and (max-width: 768px) {
+    .features, .tips-grid, .container {
+        padding-left: 15px !important;  
+        padding-right: 15px !important;
+        width: 100% !important;
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr !important; 
+    }
+
+    .hero h1 {
+        word-wrap: break-word !important; 
+    }
+}
     .hero {
         padding: 60px 5% !important;        /* Saves vertical spacing on mobile */
     }
