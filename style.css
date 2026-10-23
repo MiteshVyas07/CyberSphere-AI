@@ -145,16 +145,15 @@ button{
 }
 
 .tool-card h2{
-margin-bottom:15px;
-color:#00d4ff;
+    margin-bottom:15px;
+    color:#00d4ff;
 }
 
 #strengthResult,
 #urlResult,
 #tipOutput{
-margin-top:15px;
+    margin-top:15px;
 }
-
 
 .learn-card{
     background:#111827;
@@ -181,26 +180,26 @@ margin-top:15px;
 }
 
 #answers button{
-display:block;
-width:100%;
-margin-top:10px;
+    display:block;
+    width:100%;
+    margin-top:10px;
 }
 
 #aiResponse{
-margin-top:20px;
-padding:20px;
-background:#1f2937;
-border-radius:10px;
-line-height:1.8;
+    margin-top:20px;
+    padding:20px;
+    background:#1f2937;
+    border-radius:10px;
+    line-height:1.8;
 }
 
 .tech-list{
-margin-top:15px;
-padding-left:20px;
+    margin-top:15px;
+    padding-left:20px;
 }
 
 .tech-list li{
-margin-bottom:10px;
+    margin-bottom:10px;
 }
 
 .answer-btn{
@@ -248,51 +247,6 @@ margin-bottom:10px;
     color:#d1d5db;
 }
 
-.tips-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:25px;
-    margin-top:40px;
-}
-
-.tip-card{
-    background:#111827;
-    padding:25px;
-    border-radius:15px;
-    border:1px solid #1f2937;
-    transition:0.3s;
-}
-
-.tip-card:hover{
-    transform:translateY(-10px);
-    border-color:#00d4ff;
-    box-shadow:0 0 15px rgba(0,212,255,0.4);
-}
-
-.tip-card h2{
-    color:#00d4ff;
-    margin-bottom:15px;
-}
-
-.tip-card p{
-    color:#d1d5db;
-    line-height:1.7;
-}
-
-.tool-card{
-    background:#111827;
-    padding:30px;
-    border-radius:15px;
-    margin-bottom:35px;
-    border:1px solid #1f2937;
-    transition:0.3s;
-}
-
-.tool-card:hover{
-    transform:translateY(-5px);
-    border-color:#00d4ff;
-}
-
 .stats{
     display:flex;
     justify-content:center;
@@ -331,59 +285,36 @@ margin-bottom:10px;
     text-shadow:0 0 20px rgba(0,212,255,0.7);
 }
 
-/* Mobile Responsiveness for screens under 768px wide */
-@media (max-width: 768px) {
+/* =======================================================
+   CLEAN & POWERFUL MOBILE RESPONSIVENESS OVERRIDES
+   ======================================================= */
+@media screen and (max-width: 768px) {
     header {
-        flex-direction: column; /* Stacks the logo on top and links below */
-        align-items: center;
-        text-align: center;
-        padding: 15px 10px;
+        flex-direction: column !important; /* Stacks logo over links */
+        gap: 15px !important;
+        padding: 20px 2% !important;
     }
 
     nav {
-        display: flex;
-        flex-wrap: wrap;       /* Lets links wrap neatly into rows if needed */
-        justify-content: center;
-        gap: 12px;             /* Adds clean space between links so they don't overlap */
-        margin-top: 15px;      /* Pushes links down away from the logo */
+        display: flex !important;
+        flex-wrap: wrap !important;        /* Wraps links to a new line cleanly */
+        justify-content: center !important;
+        gap: 10px !important;
+        margin: 0 !important;
     }
 
     nav a {
-        padding: 5px 10px;     /* Makes links easier to tap on a phone */
-        font-size: 14px;       /* Slightly smaller text for mobile screens */
-    }
-}
-
-/* Foolproof Mobile Viewport Overrides (Screens under 768px wide) */
-@media screen and (max-width: 768px) {
-    header {
-        display: flex !important;
-        flex-direction: column !important; /* Forces layout to stack vertically */
-        align-items: center !important;    /* Centers everything horizontally */
-        text-align: center !important;
-        width: 100% !important;
-        padding: 15px 0 !important;
-    }
-
-    header .logo {
-        margin-bottom: 12px !important;    /* Creates vertical breathing room below logo */
-        display: flex !important;
-        justify-content: center !important;
-    }
-
-    header nav {
-        display: flex !important;
-        flex-direction: row !important;     /* Arranges links horizontally */
-        flex-wrap: wrap !important;        /* Permits wrapping onto clean rows naturally */
-        justify-content: center !important;/* Keeps the wrapped links centered */
-        width: 100% !important;
-        gap: 12px !important;              /* Ensures no touching or overlap between words */
-        padding: 0 10px !important;
-    }
-
-    header nav a {
+        margin-left: 0 !important;         /* Removes heavy desktop left margin */
+        padding: 6px 10px !important;       /* Adds easy-to-tap spacing */
+        font-size: 14px !important;         /* Scales down perfectly */
         display: inline-block !important;
-        white-space: nowrap !important;    /* Keeps words like "AI Tips" on a single line */
-        font-size: 14px !important;        /* Perfect text sizing for phone displays */
+    }
+
+    .hero h1 {
+        font-size: 40px !important;         /* Reduces giant 70px title for phone screen widths */
+    }
+    
+    .hero {
+        padding: 60px 5% !important;        /* Saves vertical spacing on mobile */
     }
 }
