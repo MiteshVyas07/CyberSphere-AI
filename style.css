@@ -353,3 +353,37 @@ margin-bottom:10px;
         font-size: 14px;       /* Slightly smaller text for mobile screens */
     }
 }
+
+/* Foolproof Mobile Viewport Overrides (Screens under 768px wide) */
+@media screen and (max-width: 768px) {
+    header {
+        display: flex !important;
+        flex-direction: column !important; /* Forces layout to stack vertically */
+        align-items: center !important;    /* Centers everything horizontally */
+        text-align: center !important;
+        width: 100% !important;
+        padding: 15px 0 !important;
+    }
+
+    header .logo {
+        margin-bottom: 12px !important;    /* Creates vertical breathing room below logo */
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    header nav {
+        display: flex !important;
+        flex-direction: row !important;     /* Arranges links horizontally */
+        flex-wrap: wrap !important;        /* Permits wrapping onto clean rows naturally */
+        justify-content: center !important;/* Keeps the wrapped links centered */
+        width: 100% !important;
+        gap: 12px !important;              /* Ensures no touching or overlap between words */
+        padding: 0 10px !important;
+    }
+
+    header nav a {
+        display: inline-block !important;
+        white-space: nowrap !important;    /* Keeps words like "AI Tips" on a single line */
+        font-size: 14px !important;        /* Perfect text sizing for phone displays */
+    }
+}
