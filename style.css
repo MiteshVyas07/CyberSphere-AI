@@ -330,3 +330,26 @@ margin-bottom:10px;
 .hero-icon i{
     text-shadow:0 0 20px rgba(0,212,255,0.7);
 }
+
+/* Mobile Responsiveness for screens under 768px wide */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stacks the logo on top and links below */
+        align-items: center;
+        text-align: center;
+        padding: 15px 10px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;       /* Lets links wrap neatly into rows if needed */
+        justify-content: center;
+        gap: 12px;             /* Adds clean space between links so they don't overlap */
+        margin-top: 15px;      /* Pushes links down away from the logo */
+    }
+
+    nav a {
+        padding: 5px 10px;     /* Makes links easier to tap on a phone */
+        font-size: 14px;       /* Slightly smaller text for mobile screens */
+    }
+}
