@@ -314,28 +314,41 @@ button{
         font-size: 40px !important;         /* Reduces giant 70px title for phone screen widths */
     }
 
-    /* Fix horizontal page movement and overflow */
+   /* Ultimate Mobile Stability & Anti-Wobble Fix */
 html, body {
+    max-width: 100% !important;
     width: 100% !important;
-    overflow-x: hidden !important; 
+    overflow-x: clip !important; /* Forces mobile stability on modern phones */
+}
+
+/* Force all structural boxes to stay inside the screen dimensions */
+header, footer, .hero, .features, .stats, .container, .tips-grid, .tool-card, .learn-card {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
 }
 
 @media screen and (max-width: 768px) {
-    .features, .tips-grid, .container {
+    /* Prevent grids and flex lines from forcing items outside the boundary */
+    .features, .tips-grid, .stats {
         padding-left: 15px !important;  
         padding-right: 15px !important;
+        gap: 15px !important;            
+    }
+
+    /* Stacks stats cards vertically if the horizontal space runs out */
+    .stats {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+    .stat-card {
         width: 100% !important;
+        max-width: 280px !important;     
     }
 
-    .tips-grid {
-        grid-template-columns: 1fr !important; 
-    }
-
-    .hero h1 {
-        word-wrap: break-word !important; 
-    }
-}
-    .hero {
-        padding: 60px 5% !important;        /* Saves vertical spacing on mobile */
+    /* Protects text titles from breaking layout scaling boundaries */
+    h1, h2, h3, p, a {
+        overflow-wrap: break-word !important;
+        word-break: break-word !important;
     }
 }
