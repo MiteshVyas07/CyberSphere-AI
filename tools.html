@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CyberSphere AI - Tools</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<i class="fa-solid fa-shield-halved"></i>
+CyberSphere AI
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="tools.html">Tools</a>
+<a href="learn.html">Learn</a>
+<a href="quiz.html">Quiz</a>
+<a href="ai.html">AI</a>
+<a href="tips.html">Tips</a>
+<a href="about.html">About</a>
+</nav>
+
+</header>
+
+<h1 class="page-title">
+Security Tools
+</h1>
+
+<div class="container">
+
+<!-- PASSWORD GENERATOR -->
+
+<div class="tool-card">
+
+<h2>Password Generator</h2>
+
+<input
+type="number"
+id="passwordLength"
+value="12"
+min="4"
+max="50">
+
+<button onclick="generatePassword()">
+Generate Password
+</button>
+
+<input
+type="text"
+id="passwordOutput"
+readonly>
+
+</div>
+
+<!-- PASSWORD CHECKER -->
+
+<div class="tool-card">
+
+<h2>Password Strength Checker</h2>
+
+<input
+type="password"
+id="strengthInput"
+placeholder="Enter password"
+onkeyup="checkStrength()">
+
+<h3 id="strengthResult">
+Strength:
+</h3>
+
+</div>
+
+<!-- URL CHECKER -->
+
+<div class="tool-card">
+
+<h2>URL Safety Checker</h2>
+
+<input
+type="text"
+id="urlInput"
+placeholder="https://example.com">
+
+<button onclick="checkURL()">
+Check URL
+</button>
+
+<h3 id="urlResult"></h3>
+
+</div>
+
+<!-- SHA256 -->
+
+<div class="tool-card">
+
+<h2>SHA-256 Generator</h2>
+
+<textarea
+id="hashInput"
+placeholder="Enter text"></textarea>
+
+<button onclick="generateHash()">
+Generate Hash
+</button>
+
+<textarea
+id="hashOutput"
+readonly></textarea>
+
+</div>
+
+<!-- SECURITY TIPS -->
+
+<div class="tool-card">
+
+<h2>Security Tip Generator</h2>
+
+<button onclick="showTip()">
+Get Security Tip
+</button>
+
+<h3 id="tipOutput">
+Click button to generate a tip.
+</h3>
+
+</div>
+
+</div>
+
+<footer>
+    <p>
+        CyberSphere AI © 2026 | Developed by
+        <strong>Mitesh Vyas</strong>
+    </p>
+</footer>
+
+<script src="tools.js"></script>
+
+</body>
+</html>
